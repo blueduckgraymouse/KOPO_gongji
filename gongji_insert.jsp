@@ -39,7 +39,7 @@
   %>
   <script>
     alert("등록 완료");
-    window.location.href = "viewOne.jsp?id=<%= newId%>";
+    window.location.href = "gongji_view.jsp?id=<%= newId%>";
   </script>
 </head>
 

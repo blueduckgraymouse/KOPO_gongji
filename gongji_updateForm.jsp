@@ -73,7 +73,7 @@
 
     <h1>공지사항 수정</h1>
 
-    <form method="post" action="updateOne.jsp">
+    <form method="post" action="gongji_update.jsp">
       <table class="table-update">
         <tr>
           <td class="title"><b>번호</b></td>
@@ -107,8 +107,8 @@
 
       <div class="div-button">
         <input type="submit" value="저장">
-        <input type="button" value="삭제" onclick="location.href='deleteOne.jsp?id=<%= rset.getString("id")%>'">
-        <input type="button" value="취소" onclick="location.href='viewAll.jsp'">
+        <input type="button" value="삭제" onclick="location.href='gongji_delete.jsp?id=<%= rset.getString("id")%>'">
+        <input type="button" value="취소" onclick="location.href='gongji_list.jsp'">
       </div>
     </form>
   </div>

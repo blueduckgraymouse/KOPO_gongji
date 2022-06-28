@@ -62,7 +62,7 @@
 
     <h1>공지사항 등록</h1>
 
-    <form method="post" action="insertOne.jsp">
+    <form method="post" action="gongji_insert.jsp">
       <table class="table-input">
         <tr>
           <td class="title"><b>번호</b></td>
@@ -95,7 +95,7 @@
 
       <div class="div-button">
         <input type="submit" value="등록">
-        <input type="button" value="취소" onclick="location.href='viewAll.jsp'">
+        <input type="button" value="취소" onclick="location.href='gongji_list.jsp'">
       </div>
     </div>
   </form>

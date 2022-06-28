@@ -94,8 +94,8 @@
     <br>
     
     <div class="div-button">
-      <input type="button" value="목록" onclick="location.href='viewAll.jsp'">
-      <input type="button" value="수정" onclick="location.href='updateForm.jsp?id=<%= rset.getString("id")%>'">
+      <input type="button" value="목록" onclick="location.href='gongji_list.jsp'">
+      <input type="button" value="수정" onclick="location.href='gongji_updateForm.jsp?id=<%= rset.getString("id")%>'">
     </div>
   </div>
   <%	

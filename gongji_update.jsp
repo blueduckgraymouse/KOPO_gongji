@@ -29,7 +29,7 @@
   %>
   <script>
     alert("수정 완료");
-    window.location.href = "viewOne.jsp?id=<%= id%>";
+    window.location.href = "gongji_view.jsp?id=<%= id%>";
   </script>
 </head>
 

@@ -25,7 +25,7 @@
   %>
   <script>
     alert("삭제 완료");
-    window.location.href = "viewAll.jsp";
+    window.location.href = "gongji_list.jsp";
   </script>
 </head>
 
