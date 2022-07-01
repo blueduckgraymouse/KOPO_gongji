@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page errorPage="./error.jsp" %>    
+<%@ page errorPage="./gongji_error.jsp" %>    
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="java.util.Date" %>
 <!DOCTYPE html>
@@ -58,7 +58,7 @@
 
 <body>
   <div class="container">
-    <jsp:include page="banner.jsp"/>
+    <jsp:include page="gongji_banner.jsp"/>
 
     <h1>공지사항 등록</h1>
 

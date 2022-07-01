@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page errorPage="./error.jsp" %>
+<%@ page errorPage="./gongji_error.jsp" %>
 <%@ page import="java.sql.*" %>
 <!DOCTYPE html>
 <html>
@@ -47,6 +47,12 @@
     div.div-button {
       text-align: right;
     }
+    textarea {
+      width: 98%;
+      height: 10em;
+      border: none;
+      resize: none;
+    }
   </style>
   <%
     int id = Integer.parseInt(request.getParameter("id"));
@@ -68,7 +74,7 @@
 <body>
   
   <div class="container">
-    <jsp:include page="banner.jsp"/>
+    <jsp:include page="gongji_banner.jsp"/>
 
     <h1>공지사항</h1>
 
@@ -87,7 +93,9 @@
       </tr>
       <tr>
         <td class="title"><b>내용</b></td>
-        <td id="content"><%= rset.getString("content")%></td>
+        <td id="content">
+          <textarea><%= rset.getString("content")%></textarea>
+        </td>
       </tr>
     </table>
 
