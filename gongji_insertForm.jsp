@@ -95,7 +95,7 @@
 
       <div class="div-button">
         <input type="submit" value="등록">
-        <input type="button" value="취소" onclick="location.href='gongji_list.jsp'">
+        <input type="button" value="취소" onclick="location.href='./gongji_list.jsp'">
       </div>
     </div>
   </form>

@@ -30,17 +30,23 @@
       border-bottom: 3px double black;
     }
     a {
-      color: black;
+      color:grey;
       text-decoration: none;
     }
     a:hover {
       text-decoration: underline;
+      color: black;
     }
     div.div-button {
       text-align: right;
     }
     .pagination {
-      margin:0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .space-table {
+      height: 380px;
     }
   </style>
   <%
@@ -66,7 +72,7 @@
 
     stmt = conn.createStatement();
 
-    String query2 = "select * from gongji limit " + ((Integer.parseInt(no_page)-1)*size_page) + ", " + size_page + ";";
+    String query2 = "select * from gongji order by id desc limit " + ((Integer.parseInt(no_page)-1)*size_page) + ", " + size_page + ";";
     ResultSet rset2 = stmt.executeQuery(query2);
   %>
 </head>
@@ -77,24 +83,27 @@
 
     <h1>공지사항</h1>
 
-    <table class="table-view">
-      <tr class="title">
-        <td width="50px"><b>번호</b></td>
-        <td width="500px"><b>제목</b></td>
-        <td width="100px"><b>등록일</b></td>
-      </tr>
-      <%
-        while(rset2.next()) {
-          out.println("<tr>");											
-            out.println("<td>" + rset2.getInt("id") + "</td>");
-            out.println("<td><a href='gongji_view.jsp?id=" + rset2.getString("id") + "'>" + rset2.getString("title") + "</a></td>");
-          out.println("<td>" + rset2.getDate("date") + "</td>");
-          out.println("</tr>");
-        }
-      %>
-    </table>
-
-    <br>
+    <div class="space-table">
+      <table class="table-view">
+        <tr class="title">
+          <td width="50px"><b>번호</b></td>
+          <td width="500px"><b>제목</b></td>
+          <td width="100px"><b>등록일</b></td>
+        </tr>
+        <%
+          while(rset2.next()) {
+            out.println("<tr>");											
+              out.println("<td>" + rset2.getInt("id") + "</td>");
+              out.println("<td><a href='gongji_view.jsp?id=" + rset2.getString("id") + "'>" + rset2.getString("title") + "</a></td>");
+            out.println("<td>" + rset2.getDate("date") + "</td>");
+            out.println("</tr>");
+          }
+        %>
+      </table>
+    </div>
+    <div class="div-button">
+      <input type="button" value="신규" onclick="window.location='gongji_insertForm.jsp'">
+    </div>
 
     <div class="pagination">
       <%
@@ -139,12 +148,6 @@
         
         out.println("<tr></table>");
       %>
-    </div>
-
-    <br>
-
-    <div class="div-button">
-      <input type="button" value="신규" onclick="window.location='gongji_insertForm.jsp'">
     </div>
   </div>
   <%	

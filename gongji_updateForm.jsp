@@ -108,7 +108,7 @@
       <div class="div-button">
         <input type="submit" value="저장">
         <input type="button" value="삭제" onclick="location.href='gongji_delete.jsp?id=<%= rset.getString("id")%>'">
-        <input type="button" value="취소" onclick="location.href='gongji_list.jsp'">
+        <input type="button" value="취소" onclick="history.go(-1)">
       </div>
     </form>
   </div>
